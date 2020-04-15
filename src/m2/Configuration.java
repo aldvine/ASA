@@ -4,17 +4,29 @@ import java.util.ArrayList;
 
 public class Configuration implements Element {
 
-	private ArrayList<Element> composants;
+
+	private ArrayList<Element> elements; 
+	private InterfaceConfiguration interfaceConfiguration;
 	
 	public Configuration() {
-		this.composants = new ArrayList<Element>();
+		this.elements = new ArrayList<Element>();
 	}
 
-	public ArrayList<Element> getComposants() {
-		return composants;
+	public ArrayList<Element> getElements() {
+		return elements;
 	}
 
-	public void setComposants(ArrayList<Element> composants) {
-		this.composants = composants;
+	public void setElements(ArrayList<Element> elements) {
+		this.elements = elements;
 	}
+
+	public InterfaceConfiguration getInterfaceConfiguration() {
+		return interfaceConfiguration;
+	}
+
+	public void setInterfaceConfiguration(InterfaceConfiguration interfaceConfiguration) {
+		this.interfaceConfiguration = interfaceConfiguration;
+	}
+
+	
 }
