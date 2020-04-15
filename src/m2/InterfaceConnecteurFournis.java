@@ -4,10 +4,19 @@ import java.util.ArrayList;
 
 public class InterfaceConnecteurFournis extends InterfaceConnecteur {
 	private ArrayList<RoleFournis> rolesFournis;
-
+	private Connecteur connecteur;
+	
 	public InterfaceConnecteurFournis() {
 		super();
 		this.rolesFournis = new ArrayList<RoleFournis>();
+	}
+
+	public Connecteur getConnecteur() {
+		return connecteur;
+	}
+
+	public void setConnecteur(Connecteur connecteur) {
+		this.connecteur = connecteur;
 	}
 
 	public ArrayList<RoleFournis> getRolesFournis() {
