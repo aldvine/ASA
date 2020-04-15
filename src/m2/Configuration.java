@@ -1,5 +1,5 @@
 package m2;
 
-public class Configuration {
+public class Configuration implements Element {
 
 }

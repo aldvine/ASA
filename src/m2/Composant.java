@@ -1,5 +1,5 @@
 package m2;
 
-public class Composant {
+public class Composant implements Element {
 
 }
