@@ -10,6 +10,7 @@ public class Configuration implements Element {
 	
 	public Configuration() {
 		this.elements = new ArrayList<Element>();
+		this.interfaceConfiguration = new InterfaceConfiguration();
 	}
 
 	public ArrayList<Element> getElements() {
@@ -20,6 +21,10 @@ public class Configuration implements Element {
 		this.elements = elements;
 	}
 
+	public void addElements(Element element) {
+		this.elements.add(element);
+	}
+	
 	public InterfaceConfiguration getInterfaceConfiguration() {
 		return interfaceConfiguration;
 	}

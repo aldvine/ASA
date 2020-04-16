@@ -9,6 +9,7 @@ public class InterfaceComposantRequis extends InterfaceComposant {
 	public InterfaceComposantRequis() {
 		super();
 		this.servicesRequis = new ArrayList<ServiceRequis>();
+		this.portsRequis=new ArrayList<PortComposantRequis>();
 	}
 	
 	public ArrayList<PortComposantRequis> getPortsRequis() {
@@ -18,12 +19,18 @@ public class InterfaceComposantRequis extends InterfaceComposant {
 	public void setPortsRequis(ArrayList<PortComposantRequis> portsRequis) {
 		this.portsRequis = portsRequis;
 	}
+	public void addPortsRequis(PortComposantRequis portsRequis) {
+		this.portsRequis.add(portsRequis);
+	}
 
 	public ArrayList<ServiceRequis> getServicesRequis() {
 		return servicesRequis;
 	}
 	public void setServicesRequis(ArrayList<ServiceRequis> servicesRequis) {
 		this.servicesRequis = servicesRequis;
+	}
+	public void addServicesRequis(ServiceRequis servicesRequis) {
+		this.servicesRequis.add(servicesRequis);
 	}
 	public Composant getComposant() {
 		return composant;

@@ -20,6 +20,8 @@ public class Client extends Composant {
 	public Client() {
 		super();
 		this.contraintesTechniques= new ArrayList<ContrainteTechnique>();
+		this.interfaceFournisClient = new InterfaceComposantFournis();
+		this.interfaceRequisClient= new InterfaceComposantRequis();
 		this.proprietes = new ArrayList<Propriete>();
 	}
 	public ArrayList<ContrainteTechnique> getContraintesTechniques() {
@@ -52,16 +54,16 @@ public class Client extends Composant {
 	public void addSystemeExploitation(ContrainteTechnique systemeExploitation) {
 		this.contraintesTechniques.add(systemeExploitation);
 	}
-	public void addServiceRequisClient(ArrayList<ServiceRequis> serviceRequisClient) {
-		this.interfaceRequisClient.setServicesRequis(serviceRequisClient);
+	public void addServiceRequisClient(ServiceRequis serviceRequisClient) {
+		this.interfaceRequisClient.addServicesRequis(serviceRequisClient);
 	}
-	public void addPortRequisClient(ArrayList<PortComposantRequis> portRequisClient) {
-		this.interfaceRequisClient.setPortsRequis(portRequisClient);
+	public void addPortRequisClient(PortComposantRequis portRequisClient) {
+		this.interfaceRequisClient.addPortsRequis(portRequisClient);
 	}
-	public void addServiceFournisClient(ArrayList<ServiceFournis> serviceFournisClient) {
-		this.interfaceFournisClient.setServicesFournis(serviceFournisClient);
+	public void addServiceFournisClient(ServiceFournis serviceFournisClient) {
+		this.interfaceFournisClient.addServicesFournis(serviceFournisClient);
 	}
-	public void addPortFournisClient(ArrayList<PortComposantFournis> portFournisClient) {
-		this.interfaceFournisClient.setPortsFournis(portFournisClient);
+	public void addPortFournisClient(PortComposantFournis portFournisClient) {
+		this.interfaceFournisClient.addPortsFournis(portFournisClient);
 	}
 }

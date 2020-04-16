@@ -13,6 +13,7 @@ public class SimpleCS extends Configuration{
 	public SimpleCS() {
 		super();
 		this.elements = new ArrayList<Element>();
+		this.interfaceConfigurationSimpleCS = new InterfaceConfiguration();
 	}
 
 	public ArrayList<Element> getElements() {
@@ -21,6 +22,10 @@ public class SimpleCS extends Configuration{
 
 	public void setElements(ArrayList<Element> elements) {
 		this.elements = elements;
+	}
+	
+	public void addElements(Element element) {
+		this.elements.add(element);
 	}
 
 	public InterfaceConfiguration getInterfaceConfigurationSimpleCS() {

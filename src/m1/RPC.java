@@ -42,16 +42,16 @@ public class RPC extends Connecteur{
 	public void addGlueRPC(Glue glueRPC) {
 		this.glues.add(glueRPC);
 	}
-	public void addRolesRequisRPCClient(ArrayList<RoleRequis> rolesRequisRPCClient) {
-		this.interfaceConnecteurRequisRPC.setRolesRequis(rolesRequisRPCClient);
+	public void addRolesRequisRPCClient(RoleRequis rolesRequisRPCClient) {
+		this.interfaceConnecteurRequisRPC.addRolesRequis(rolesRequisRPCClient);
 	}
-	public void addRolesRequisRPCServeur(ArrayList<RoleRequis> rolesRequisRPCServeur) {
-		this.interfaceConnecteurRequisRPC.setRolesRequis(rolesRequisRPCServeur);
+	public void addRolesRequisRPCServeur(RoleRequis rolesRequisRPCServeur) {
+		this.interfaceConnecteurRequisRPC.addRolesRequis(rolesRequisRPCServeur);
 	}
-	public void addRolesFournisRPCClient(ArrayList<RoleFournis> rolesFournisRPCClient) {
-		this.interfaceConnecteurFournisRPC.setRolesFournis(rolesFournisRPCClient);
+	public void addRolesFournisRPCClient(RoleFournis rolesFournisRPCClient) {
+		this.interfaceConnecteurFournisRPC.addRolesFournis(rolesFournisRPCClient);
 	}
-	public void addRolesFournisRPCServeur(ArrayList<RoleFournis> rolesFournisRPCServeur) {
-		this.interfaceConnecteurFournisRPC.setRolesFournis(rolesFournisRPCServeur);
+	public void addRolesFournisRPCServeur(RoleFournis rolesFournisRPCServeur) {
+		this.interfaceConnecteurFournisRPC.addRolesFournis(rolesFournisRPCServeur);
 	}
 }

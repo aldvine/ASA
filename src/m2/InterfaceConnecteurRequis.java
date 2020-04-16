@@ -27,6 +27,9 @@ public class InterfaceConnecteurRequis extends InterfaceConnecteur {
 	public void setRolesRequis(ArrayList<RoleRequis> rolesRequis) {
 		this.rolesRequis = rolesRequis;
 	}
+	public void addRolesRequis(RoleRequis rolesRequis) {
+		this.rolesRequis.add( rolesRequis);
+	}
 
 	
 	

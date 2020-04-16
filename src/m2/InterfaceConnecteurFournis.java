@@ -26,5 +26,8 @@ public class InterfaceConnecteurFournis extends InterfaceConnecteur {
 	public void setRolesFournis(ArrayList<RoleFournis> rolesFournis) {
 		this.rolesFournis = rolesFournis;
 	}	
+	public void addRolesFournis(RoleFournis rolesFournis) {
+		this.rolesFournis.add(rolesFournis);
+	}	
 
 }

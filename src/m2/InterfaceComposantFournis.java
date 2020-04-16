@@ -19,11 +19,17 @@ public class InterfaceComposantFournis extends InterfaceComposant {
 	public void setServicesFournis(ArrayList<ServiceFournis> servicesFournis) {
 		this.servicesFournis = servicesFournis;
 	}
+	public void addServicesFournis(ServiceFournis servicesFournis) {
+		this.servicesFournis.add( servicesFournis);
+	}
 	public ArrayList<PortComposantFournis> getPortsFournis() {
 		return portsFournis;
 	}
 	public void setPortsFournis(ArrayList<PortComposantFournis> portsFournis) {
 		this.portsFournis = portsFournis;
+	}
+	public void addPortsFournis(PortComposantFournis portsFournis) {
+		this.portsFournis.add(portsFournis);
 	}
 	public Composant getComposant() {
 		return composant;
