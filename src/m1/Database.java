@@ -20,6 +20,8 @@ public class Database extends Composant {
 	public Database() {
 		super();
 		this.contraintesTechniques= new ArrayList<ContrainteTechnique>();
+		this.interfaceFournisDatabase= new InterfaceComposantFournis();
+		this.interfaceRequisDatabase  =new InterfaceComposantRequis();
 		this.proprietes = new ArrayList<Propriete>();
 	}
 	public ArrayList<ContrainteTechnique> getContraintesTechniques() {
@@ -52,16 +54,16 @@ public class Database extends Composant {
 	public void addTypeDatabase(ContrainteTechnique typeDatabase) {
 		this.contraintesTechniques.add(typeDatabase);
 	}
-	public void addServiceRequisDatabase(ArrayList<ServiceRequis> serviceRequisDatabase) {
-		this.interfaceRequisDatabase.setServicesRequis(serviceRequisDatabase);
+	public void addServiceRequisDatabase(ServiceRequis serviceRequisDatabase) {
+		this.interfaceRequisDatabase.addServicesRequis(serviceRequisDatabase);
 	}
-	public void addPortRequisDatabase(ArrayList<PortComposantRequis> portRequisDatabase) {
-		this.interfaceRequisDatabase.setPortsRequis(portRequisDatabase);
+	public void addPortRequisDatabase(PortComposantRequis portRequisDatabase) {
+		this.interfaceRequisDatabase.addPortsRequis(portRequisDatabase);
 	}
-	public void addServiceFournisDatabase(ArrayList<ServiceFournis> serviceFournisDatabase) {
-		this.interfaceFournisDatabase.setServicesFournis(serviceFournisDatabase);
+	public void addServiceFournisDatabase(ServiceFournis serviceFournisDatabase) {
+		this.interfaceFournisDatabase.addServicesFournis(serviceFournisDatabase);
 	}
-	public void addPortFournisDatabase(ArrayList<PortComposantFournis> portFournisDatabase) {
-		this.interfaceFournisDatabase.setPortsFournis(portFournisDatabase);
+	public void addPortFournisDatabase(PortComposantFournis portFournisDatabase) {
+		this.interfaceFournisDatabase.addPortsFournis(portFournisDatabase);
 	}
 }

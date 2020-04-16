@@ -20,6 +20,8 @@ public class SecurityManager extends Composant {
 	public SecurityManager() {
 		super();
 		this.contraintesTechniques= new ArrayList<ContrainteTechnique>();
+		this.interfaceFournisSecurityManager = new InterfaceComposantFournis();
+		this.interfaceRequisSecurityManager =  new InterfaceComposantRequis();
 		this.proprietes = new ArrayList<Propriete>();
 	}
 	public ArrayList<ContrainteTechnique> getContraintesTechniques() {
@@ -52,16 +54,16 @@ public class SecurityManager extends Composant {
 	public void addTypeSecurityManager(ContrainteTechnique typeSecurityManager) {
 		this.contraintesTechniques.add(typeSecurityManager);
 	}
-	public void addServiceRequisSecurityManager(ArrayList<ServiceRequis> serviceRequisSecurityManager) {
-		this.interfaceRequisSecurityManager.setServicesRequis(serviceRequisSecurityManager);
+	public void addServiceRequisSecurityManager(ServiceRequis serviceRequisSecurityManager) {
+		this.interfaceRequisSecurityManager.addServicesRequis(serviceRequisSecurityManager);
 	}
-	public void addPortRequisSecurityManager(ArrayList<PortComposantRequis> portRequisSecurityManager) {
-		this.interfaceRequisSecurityManager.setPortsRequis(portRequisSecurityManager);
+	public void addPortRequisSecurityManager(PortComposantRequis portRequisSecurityManager) {
+		this.interfaceRequisSecurityManager.addPortsRequis(portRequisSecurityManager);
 	}
-	public void addServiceFournisSecurityManager(ArrayList<ServiceFournis> serviceFournisSecurityManager) {
-		this.interfaceFournisSecurityManager.setServicesFournis(serviceFournisSecurityManager);
+	public void addServiceFournisSecurityManager(ServiceFournis serviceFournisSecurityManager) {
+		this.interfaceFournisSecurityManager.addServicesFournis(serviceFournisSecurityManager);
 	}
-	public void addPortFournisSecurityManager(ArrayList<PortComposantFournis> portFournisSecurityManager) {
-		this.interfaceFournisSecurityManager.setPortsFournis(portFournisSecurityManager);
+	public void addPortFournisSecurityManager(PortComposantFournis portFournisSecurityManager) {
+		this.interfaceFournisSecurityManager.addPortsFournis(portFournisSecurityManager);
 	}
 }

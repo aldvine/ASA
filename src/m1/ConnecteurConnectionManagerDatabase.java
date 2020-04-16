@@ -39,19 +39,19 @@ public class ConnecteurConnectionManagerDatabase extends Connecteur{
 	public void setGlues(ArrayList<Glue> glues) {
 		this.glues = glues;
 	}
-	public void addGlueCCMSM(Glue glueCCMD) {
+	public void addGlueCCMD(Glue glueCCMD) {
 		this.glues.add(glueCCMD);
 	}
-	public void addRolesRequisCCMDConnectionManager(ArrayList<RoleRequis> rolesRequisCCMDConnectionManager) {
-		this.interfaceConnecteurRequisCCMD.setRolesRequis(rolesRequisCCMDConnectionManager);
+	public void addRolesRequisCCMDConnectionManager(RoleRequis rolesRequisCCMDConnectionManager) {
+		this.interfaceConnecteurRequisCCMD.addRolesRequis(rolesRequisCCMDConnectionManager);
 	}
-	public void addRolesRequisCCMDDatabase(ArrayList<RoleRequis> rolesRequisCCMDDatabase) {
-		this.interfaceConnecteurRequisCCMD.setRolesRequis(rolesRequisCCMDDatabase);
+	public void addRolesRequisCCMDDatabase(RoleRequis rolesRequisCCMDDatabase) {
+		this.interfaceConnecteurRequisCCMD.addRolesRequis(rolesRequisCCMDDatabase);
 	}
-	public void addRolesFournisCCMDConnectionManager(ArrayList<RoleFournis> rolesFournisCCMDConnectionManager) {
-		this.interfaceConnecteurFournisCCMD.setRolesFournis(rolesFournisCCMDConnectionManager);
+	public void addRolesFournisCCMDConnectionManager(RoleFournis rolesFournisCCMDConnectionManager) {
+		this.interfaceConnecteurFournisCCMD.addRolesFournis(rolesFournisCCMDConnectionManager);
 	}
-	public void addRolesFournisCCMDDatabase(ArrayList<RoleFournis> rolesFournisCCMDDatabase) {
-		this.interfaceConnecteurFournisCCMD.setRolesFournis(rolesFournisCCMDDatabase);
+	public void addRolesFournisCCMDDatabase(RoleFournis rolesFournisCCMDDatabase) {
+		this.interfaceConnecteurFournisCCMD.addRolesFournis(rolesFournisCCMDDatabase);
 	}
 }

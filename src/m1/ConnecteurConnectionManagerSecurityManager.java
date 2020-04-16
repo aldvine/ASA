@@ -42,16 +42,16 @@ public class ConnecteurConnectionManagerSecurityManager extends Connecteur{
 	public void addGlueCCMSM(Glue glueCCMSM) {
 		this.glues.add(glueCCMSM);
 	}
-	public void addRolesRequisCCMSMConnectionManager(ArrayList<RoleRequis> rolesRequisCCMSMConnectionManager) {
-		this.interfaceConnecteurRequisCCMSM.setRolesRequis(rolesRequisCCMSMConnectionManager);
+	public void addRolesRequisCCMSMConnectionManager(RoleRequis rolesRequisCCMSMConnectionManager) {
+		this.interfaceConnecteurRequisCCMSM.addRolesRequis(rolesRequisCCMSMConnectionManager);
 	}
-	public void addRolesRequisCCMSMSecurityManager(ArrayList<RoleRequis> rolesRequisCCMSMSecurityManager) {
-		this.interfaceConnecteurRequisCCMSM.setRolesRequis(rolesRequisCCMSMSecurityManager);
+	public void addRolesRequisCCMSMSecurityManager(RoleRequis rolesRequisCCMSMSecurityManager) {
+		this.interfaceConnecteurRequisCCMSM.addRolesRequis(rolesRequisCCMSMSecurityManager);
 	}
-	public void addRolesFournisCCMSMConnectionManager(ArrayList<RoleFournis> rolesFournisCCMSMConnectionManager) {
-		this.interfaceConnecteurFournisCCMSM.setRolesFournis(rolesFournisCCMSMConnectionManager);
+	public void addRolesFournisCCMSMConnectionManager(RoleFournis rolesFournisCCMSMConnectionManager) {
+		this.interfaceConnecteurFournisCCMSM.addRolesFournis(rolesFournisCCMSMConnectionManager);
 	}
-	public void addRolesFournisCCMSMSecurityManager(ArrayList<RoleFournis> rolesFournisCCMSMSecurityManager) {
-		this.interfaceConnecteurFournisCCMSM.setRolesFournis(rolesFournisCCMSMSecurityManager);
+	public void addRolesFournisCCMSMSecurityManager(RoleFournis rolesFournisCCMSMSecurityManager) {
+		this.interfaceConnecteurFournisCCMSM.addRolesFournis(rolesFournisCCMSMSecurityManager);
 	}
 }

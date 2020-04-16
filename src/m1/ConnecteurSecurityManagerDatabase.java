@@ -39,19 +39,19 @@ public class ConnecteurSecurityManagerDatabase extends Connecteur{
 	public void setGlues(ArrayList<Glue> glues) {
 		this.glues = glues;
 	}
-	public void addGlueCCMSM(Glue glueCSMD) {
+	public void addGlueCSMD(Glue glueCSMD) {
 		this.glues.add(glueCSMD);
 	}
-	public void addRolesRequisCSMDDatabase(ArrayList<RoleRequis> rolesRequisCSMDDatabase) {
-		this.interfaceConnecteurRequisCSMD.setRolesRequis(rolesRequisCSMDDatabase);
+	public void addRolesRequisCSMDDatabase(RoleRequis rolesRequisCSMDDatabase) {
+		this.interfaceConnecteurRequisCSMD.addRolesRequis(rolesRequisCSMDDatabase);
 	}
-	public void addRolesRequisCSMDecurityManager(ArrayList<RoleRequis> rolesRequisCSMDecurityManager) {
-		this.interfaceConnecteurRequisCSMD.setRolesRequis(rolesRequisCSMDecurityManager);
+	public void addRolesRequisCSMDSecurityManager(RoleRequis rolesRequisCSMDecurityManager) {
+		this.interfaceConnecteurRequisCSMD.addRolesRequis(rolesRequisCSMDecurityManager);
 	}
-	public void addRolesFournisCSMDDatabase(ArrayList<RoleFournis> rolesFournisCSMDDatabase) {
-		this.interfaceConnecteurFournisCSMD.setRolesFournis(rolesFournisCSMDDatabase);
+	public void addRolesFournisCSMDDatabase(RoleFournis rolesFournisCSMDDatabase) {
+		this.interfaceConnecteurFournisCSMD.addRolesFournis(rolesFournisCSMDDatabase);
 	}
-	public void addRolesFournisCSMDSecurityManager(ArrayList<RoleFournis> rolesFournisCSMDSecurityManager) {
-		this.interfaceConnecteurFournisCSMD.setRolesFournis(rolesFournisCSMDSecurityManager);
+	public void addRolesFournisCSMDSecurityManager(RoleFournis rolesFournisCSMDSecurityManager) {
+		this.interfaceConnecteurFournisCSMD.addRolesFournis(rolesFournisCSMDSecurityManager);
 	}
 }
