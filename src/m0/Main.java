@@ -61,8 +61,10 @@ public class Main {
 		
 		// ajout du composant connection Manager et de ses ports
 		ConnectionManager connectionManager = new ConnectionManager();
-		PortComposantFournis externalSocket = new PortComposantFournis();
-		connectionManager.addPortFournisConnectionManager(externalSocket);
+		PortComposantRequis externalSocket = new PortComposantRequis();
+		connectionManager.addPortRequisConnectionManager(externalSocket);
+		
+		
 		PortComposantFournis securityCheck = new PortComposantFournis();
 		connectionManager.addPortFournisConnectionManager(securityCheck);
 		PortComposantRequis db_query = new PortComposantRequis();
