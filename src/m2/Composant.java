@@ -43,7 +43,4 @@ public class Composant implements Element {
 	public void setConfiguration(Configuration configuration) {
 		this.configuration = configuration;
 	}
-	
-	
-	
 }
