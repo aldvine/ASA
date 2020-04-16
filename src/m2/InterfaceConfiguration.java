@@ -12,7 +12,6 @@ public class InterfaceConfiguration extends Interface {
 		super();
 		this.portsFournis = new ArrayList<PortConfigurationFournis>();
 		this.portsRequis = new ArrayList<PortConfigurationRequis>();
-		this.configuration = new Configuration();
 	}
 	
 	public Configuration getConfiguration() {
