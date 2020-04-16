@@ -13,6 +13,7 @@ public class ServerDetail extends Configuration{
 	public ServerDetail() {
 		super();
 		this.elements = new ArrayList<Element>();
+		this.interfaceConfigurationServerDetail = new InterfaceConfiguration();
 	}
 
 	public ArrayList<Element> getElements() {

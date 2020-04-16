@@ -56,14 +56,30 @@ public class Main {
 		simpleCS.addElements(rpc);
 		
 		// ajout de la configuration server_detail au composant server
-		
 		ServerDetail server_detail = new ServerDetail();
+		server.setServerDetail(server_detail);
+		InterfaceConfiguration interfaceConfigurationServerDetail = server_detail.getInterfaceConfigurationServerDetail();
+		interfaceConfigurationServerDetail.setConfiguration(server_detail);
+		
 		
 		// ajout du composant connection Manager et de ses ports
 		ConnectionManager connectionManager = new ConnectionManager();
 		PortComposantRequis externalSocket = new PortComposantRequis();
 		connectionManager.addPortRequisConnectionManager(externalSocket);
 		
+		// ajout du binding entre le portRequisConnectionManager et le portConfigurationRequisServerDetail
+		BindingRequis bindingRequisConnectionManager = new BindingRequis();
+		externalSocket.setBinding(bindingRequisConnectionManager);
+		
+		PortConfigurationRequis portConfigurationRequisServerDetail = new PortConfigurationRequis();
+		portConfigurationRequisServerDetail.setBinding(bindingRequisConnectionManager);
+		portConfigurationRequisServerDetail.setInterfaceConfiguration(interfaceConfigurationServerDetail);
+		
+		interfaceConfigurationServerDetail.addPortsRequis(portConfigurationRequisServerDetail);
+		server_detail.setInterfaceConfigurationServerDetail(interfaceConfigurationServerDetail);
+		
+		bindingRequisConnectionManager.setPortConfiguration(portConfigurationRequisServerDetail);
+		bindingRequisConnectionManager.setPortComposant(externalSocket);
 		
 		PortComposantFournis securityCheck = new PortComposantFournis();
 		connectionManager.addPortFournisConnectionManager(securityCheck);
@@ -115,7 +131,7 @@ public class Main {
 		// ajout des attachements de la configuration server_detail
 		ArrayList<Attachement> attachementsServerDetail = new ArrayList<Attachement>();
 		
-//		Attachements : {
+		//		Attachements : {
 		//		ConnectionManager.SecurityCheck 
 		//		to ConnectionManagerSecurityManager.caller,
 		//		SecurityManager.Security_Authentification 

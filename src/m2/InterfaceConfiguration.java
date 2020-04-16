@@ -12,7 +12,7 @@ public class InterfaceConfiguration extends Interface {
 		super();
 		this.portsFournis = new ArrayList<PortConfigurationFournis>();
 		this.portsRequis = new ArrayList<PortConfigurationRequis>();
-		// TODO Auto-generated constructor stub
+		this.configuration = new Configuration();
 	}
 	
 	public Configuration getConfiguration() {
@@ -29,11 +29,17 @@ public class InterfaceConfiguration extends Interface {
 	public void setPortsFournis(ArrayList<PortConfigurationFournis> portsFournis) {
 		this.portsFournis = portsFournis;
 	}
+	public void addPortsFournis(PortConfigurationFournis portFournis) {
+		this.portsFournis.add(portFournis);
+	}
 	public ArrayList<PortConfigurationRequis> getPortsRequis() {
 		return portsRequis;
 	}
 	public void setPortsRequis(ArrayList<PortConfigurationRequis> portsRequis) {
 		this.portsRequis = portsRequis;
+	}
+	public void addPortsRequis(PortConfigurationRequis portRequis) {
+		this.portsRequis.add(portRequis);
 	}
 	
 }
