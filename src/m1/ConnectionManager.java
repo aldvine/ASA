@@ -20,6 +20,8 @@ public class ConnectionManager extends Composant {
 	public ConnectionManager() {
 		super();
 		this.contraintesTechniques= new ArrayList<ContrainteTechnique>();
+		this.interfaceFournisConnectionManager = new InterfaceComposantFournis();
+		this.interfaceRequisConnectionManager = new InterfaceComposantRequis();
 		this.proprietes = new ArrayList<Propriete>();
 	}
 	public ArrayList<ContrainteTechnique> getContraintesTechniques() {
@@ -52,16 +54,16 @@ public class ConnectionManager extends Composant {
 	public void addSystemeExploitation(ContrainteTechnique systemeExploitation) {
 		this.contraintesTechniques.add(systemeExploitation);
 	}
-	public void addServiceRequisConnectionManager(ArrayList<ServiceRequis> serviceRequisConnectionManager) {
-		this.interfaceRequisConnectionManager.setServicesRequis(serviceRequisConnectionManager);
+	public void addServiceRequisConnectionManager(ServiceRequis serviceRequisConnectionManager) {
+		this.interfaceRequisConnectionManager.addServicesRequis(serviceRequisConnectionManager);
 	}
-	public void addPortRequisConnectionManager(ArrayList<PortComposantRequis> portRequisConnectionManager) {
-		this.interfaceRequisConnectionManager.setPortsRequis(portRequisConnectionManager);
+	public void addPortRequisConnectionManager(PortComposantRequis portRequisConnectionManager) {
+		this.interfaceRequisConnectionManager.addPortsRequis(portRequisConnectionManager);
 	}
-	public void addServiceFournisConnectionManager(ArrayList<ServiceFournis> serviceFournisConnectionManager) {
-		this.interfaceFournisConnectionManager.setServicesFournis(serviceFournisConnectionManager);
+	public void addServiceFournisConnectionManager(ServiceFournis serviceFournisConnectionManager) {
+		this.interfaceFournisConnectionManager.addServicesFournis(serviceFournisConnectionManager);
 	}
-	public void addPortFournisConnectionManager(ArrayList<PortComposantFournis> portFournisConnectionManager) {
-		this.interfaceFournisConnectionManager.setPortsFournis(portFournisConnectionManager);
+	public void addPortFournisConnectionManager(PortComposantFournis portFournisConnectionManager) {
+		this.interfaceFournisConnectionManager.addPortsFournis(portFournisConnectionManager);
 	}
 }
