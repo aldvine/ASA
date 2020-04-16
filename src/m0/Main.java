@@ -74,9 +74,8 @@ public class Main {
 		PortComposantRequis externalSocket = new PortComposantRequis();
 		connectionManager.addPortRequisConnectionManager(externalSocket);
 
-		System.out
-				.println(" ajout du binding entre le portRequisConnectionManager et le portConfigurationServerDetail");
-
+		System.out.println(" ajout du binding entre le portRequisConnectionManager et le portConfigurationServerDetail");
+		
 		// ajout du binding entre le portRequisConnectionManager et le
 		// portConfigurationServerDetail
 		BindingRequis bindingRequisConnectionManager = new BindingRequis();
